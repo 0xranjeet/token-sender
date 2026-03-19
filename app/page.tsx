@@ -110,7 +110,7 @@ export default function Home() {
           balance: buildReadAbi("contractBalance", "uint256")
         };
 
-        const [owner, token, rawBalance] = await Promise.all([
+        const [owner, rawToken, rawBalance] = await Promise.all([
           contractClient.readContract({
             address: distributorAddress,
             abi: distributorAbi.owner,
@@ -127,6 +127,12 @@ export default function Home() {
             functionName: "contractBalance"
           })
         ]);
+
+        if (!isAddress(rawToken)) {
+          throw new Error(`The ${resolvedTokenGetter}() call did not return a valid token address.`);
+        }
+
+        const token = rawToken as Address;
 
         const [symbol, decimals] = await Promise.all([
           contractClient
