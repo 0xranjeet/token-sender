@@ -371,7 +371,7 @@ export default function Home() {
   return (
     <main className="page-shell">
       <header className="site-header">
-        <div className="site-logo">Reward Sender</div>
+        <div className="site-logo">ERC20 Token Sender</div>
         <div className="site-header-actions">
           <ConnectButton showBalance={false} />
         </div>
