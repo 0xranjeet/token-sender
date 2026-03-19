@@ -17,7 +17,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Reward Sender",
+  title: "Token Sender",
   description: "managing ERC-20 rewards from the IPRewardDistributor contract."
 };
 
