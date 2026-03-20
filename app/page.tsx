@@ -623,6 +623,6 @@ async function resolveTokenGetterName(
   }
 
   throw new Error(
-    `Could not detect the token getter automatically. Enter the correct token getter name, for example token(), ipToken(), rewardToken(), or your custom name like tokenxyz().`
+    `Could not detect the token getter automatically. Enter the correct token getter name.`
   );
 }
